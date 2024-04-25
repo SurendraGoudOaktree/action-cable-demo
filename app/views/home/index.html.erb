@@ -1,0 +1,14 @@
+<h1>Messages</h1>
+
+<div id="messages">
+  <% @messages.each do |message| %>
+    <p><%= message.title %></p>
+  <% end %>
+</div>
+
+<p>Create message</p>
+
+<div data-controller="hello">
+  <%= text_area_tag :message, "", data: { hello_target: "message" } %>
+  <%= button_tag "say: hello", data: { action: "hello#send" } %>
+</div>
