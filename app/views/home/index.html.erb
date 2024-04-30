@@ -1,14 +1,23 @@
 
 <%= link_to "Rooms", rooms_path %>
 
+<h1>Users</h1>
 
-<h1>Messages</h1>
-
-<div id="messages">
-  <% @messages.each do |message| %>
-    <p><%= message.title %></p>
+<div id="users">
+  <% User.all.each do |user| %>
+    <p><%= user.email %></p>
   <% end %>
 </div>
+
+<h1>Rooms</h1>
+
+<div id="rooms">
+  <% Room.all.each do |room| %>
+    <p><%= room.name %></p>
+  <% end %>
+</div>
+
+
 
 <p>Create message</p>
 
